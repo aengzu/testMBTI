@@ -39,3 +39,8 @@
     opacity: 0;
   }
 }
+
+.fadeIn{
+  animation: fadeIn;
+  animation-duration: 0.5s;
+}
