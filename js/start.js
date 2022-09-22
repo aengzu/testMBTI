@@ -1,23 +1,23 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
-const reslut = document.querySelector("#result");
+const result = document.querySelector("#result");
 const endPoint = 12;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function calResult() {
-  var reslut = select.indexOf(Math.max(...select));
-  return reslut;
+  var result = select.indexOf(Math.max(...select));
+  return result;
 }
 
 function goResult() {
   main.style.WebkitAnimation = "fadeOut 1s";
   main.style.animation = "fadeOut 1s";
   setTimeout(() => {
-    reslut.style.WebkitAnimation = "fadeIn 1s";
-    reslut.style.animation = "fadeIn 1s";
+    result.style.WebkitAnimation = "fadeIn 1s";
+    result.style.animation = "fadeIn 1s";
     setTimeout(() => {
       qna.style.display = "none";
-      reslut.style.display = "block";
+      result.style.display = "block";
     }, 450)
   })
 
