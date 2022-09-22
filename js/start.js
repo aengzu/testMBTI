@@ -9,9 +9,26 @@ function calResult() {
   return result;
 }
 
+function setResult() {
+  let point = calResult();
+  const resultName = document.querySelector('.resultName');
+  resultName.innerHTML = infoList[point].name;
+
+  var resultImg = document.createElement('img');
+  const imgDiv = document.querySelector('#resultImg');
+  var imgURL = 'img/image-' + point + '.png';
+  resultImg.src = imgURL;
+  resultImg.alt = point;
+  resultImg.classList.add('img-fluid');
+  imgDiv.appendChild(resultImg);
+
+  const resultDesc = document.querySelector('.resultDesc');
+  resultDesc.innerHTML = infoList[point].desc;
+}
+
 function goResult() {
-  main.style.WebkitAnimation = "fadeOut 1s";
-  main.style.animation = "fadeOut 1s";
+  qna.style.WebkitAnimation = "fadeOut 1s";
+  qna.style.animation = "fadeOut 1s";
   setTimeout(() => {
     result.style.WebkitAnimation = "fadeIn 1s";
     result.style.animation = "fadeIn 1s";
@@ -20,9 +37,7 @@ function goResult() {
       result.style.display = "block";
     }, 450)
   })
-
-  console.log(select);
-  calResult();
+  setResult();
 }
 
 function addAnswer(answerText, qIdx, idx) {
@@ -70,7 +85,7 @@ function goNext(qIdx) {
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
   }
   var status = document.querySelector('.statusBar');
-  status.style.width = (100 / endPoint) * (qIdx + 1) + '%'
+  status.style.width = (100 / endPoint) * (qIdx + 1) + '%';
 }
 
 function begin() {
