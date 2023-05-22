@@ -1,8 +1,9 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
-const endPoint = 12;
-const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const endPoint = 13;
+const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0];
+let set = new Set();
 
 function calResult() {
   var result = select.indexOf(Math.max(...select));
@@ -64,6 +65,10 @@ function addAnswer(answerText, qIdx, idx) {
       for (let i = 0; i < target.length; i++) {
         select[target[i]] += 1;
       }
+      var cate = qnaList[qIdx].a[idx].category;
+                            
+      set.add(cate);
+       
 
       for (let i = 0; i < children.length; i++) {
         children[i].style.display = 'none';

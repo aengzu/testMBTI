@@ -2,7 +2,8 @@
 
 
 body {
-  background-image: url("../img/gummybear.jpg");
+  background-image: url("../img/colorful.jpg");
+  background-size: cover;
  }
   
   * {
