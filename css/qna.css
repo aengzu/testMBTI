@@ -20,7 +20,7 @@
 
 /* 커서가 요소 위에 올라가 있거나 선택했을때 */
 .answerList:hover, .answerList:focus {
-  background-color: palevioletred;
+  background-color: #fe9090;
   color: whitesmoke;
 }
 

@@ -1,9 +1,11 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
+
+
 const endPoint = 14;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0];
-let set = new Set();
+
 
 function calResult() {
   var result = select.indexOf(Math.max(...select));
@@ -22,6 +24,10 @@ function setResult() {
   resultImg.alt = point;
   resultImg.classList.add('img-fluid');
   imgDiv.appendChild(resultImg);
+
+
+
+
 
   const resultDesc = document.querySelector('.resultDesc');
   resultDesc.innerHTML = infoList[point].desc;
@@ -69,7 +75,7 @@ function addAnswer(answerText, qIdx, idx) {
       }
       var cate = qnaList[qIdx].a[idx].category;
                             
-      set.add(cate);
+  
        
 
       for (let i = 0; i < children.length; i++) {
