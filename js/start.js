@@ -4,7 +4,7 @@ const result = document.querySelector("#result");
 
 
 const endPoint = 14;
-const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0];
+const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
 function calResult() {
@@ -19,7 +19,7 @@ function setResult() {
 
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
-  var imgURL = 'img/image-' + point + '.png';
+  var imgURL = 'img/image-' + point + '.jpg';
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add('img-fluid');
